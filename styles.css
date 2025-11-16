@@ -533,6 +533,7 @@ section {
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+        z-index: 1001;
     }
     
     .nav-links {
@@ -543,10 +544,11 @@ section {
         background-color: var(--primary-color);
         width: 100%;
         text-align: center;
-        transition: left 0.3s;
+        transition: left 0.3s ease-in-out;
         box-shadow: 0 10px 27px rgba(0,0,0,0.05);
         padding: 2rem 0;
         gap: 0;
+        z-index: 999;
     }
     
     .nav-links.active {
@@ -558,11 +560,15 @@ section {
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .hero h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
     }
     
     .hero-buttons {
@@ -571,6 +577,23 @@ section {
     
     .about-content {
         grid-template-columns: 1fr;
+    }
+    
+    .about-stats {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .stat {
+        padding: 1rem;
+    }
+    
+    .stat h3 {
+        font-size: 1.8rem;
+    }
+    
+    .stat p {
+        font-size: 0.85rem;
     }
     
     .timeline-item {
@@ -587,5 +610,23 @@ section {
     
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .brands-section {
+        padding: 40px 0;
+    }
+    
+    .brands-title {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .brands-track {
+        gap: 40px;
+    }
+    
+    .brand-logo {
+        height: 30px;
+        max-width: 100px;
     }
 }
