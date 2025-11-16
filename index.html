@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">VRUSHABH PATIL</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -19,7 +19,7 @@
                 <li><a href="#collections">Collections</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </div>
     </nav>
 
@@ -54,10 +54,30 @@
                         <h3>213</h3>
                         <p>GATE All India Rank</p>
                     </div>
-                    <div class="stat">
-                        <h3>Multiple</h3>
-                        <p>Global Brands</p>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands-section">
+        <div class="container">
+            <h3 class="brands-title">Brands I've Worked With</h3>
+            <div class="brands-marquee">
+                <div class="brands-track">
+                    <img src="images/adidas.png" alt="Adidas" class="brand-logo">
+                    <img src="images/CalvinKlein.png" alt="Hugo Boss" class="brand-logo">
+                    <img src="images/polo.jpg" alt="Polo Ralph Lauren" class="brand-logo">
+                    <img src="images/hugo.png" alt="Bestseller" class="brand-logo">
+                    <!-- Duplicate for seamless loop -->
+                    <img src="images/adidas.png" alt="Adidas" class="brand-logo">
+                    <img src="images/CalvinKlein.png" alt="Hugo Boss" class="brand-logo">
+                    <img src="images/polo.jpg" alt="Polo Ralph Lauren" class="brand-logo">
+                    <img src="images/hugo.png" alt="Bestseller" class="brand-logo">
+                    <!-- Duplicate for seamless loop -->
+                    <img src="images/adidas.png" alt="Adidas" class="brand-logo">
+                    <img src="images/CalvinKlein.png" alt="Hugo Boss" class="brand-logo">
+                    <img src="images/polo.jpg" alt="Polo Ralph Lauren" class="brand-logo">
+                    <img src="images/hugo.png" alt="Bestseller" class="brand-logo">
                 </div>
             </div>
         </div>
@@ -73,10 +93,12 @@
                         <h3>Senior Merchandiser - Marketing</h3>
                         <h4>Shahi Exports Pvt Ltd, Bangalore</h4>
                         <ul>
-                            <li>Spearheaded product development for Adidas and PVH/CK</li>
-                            <li>Developed comprehensive inventory plans and TNA schedules</li>
-                            <li>Led raw-material sourcing and vendor negotiations</li>
-                            <li>Collaborated with cross-functional teams for quality assurance</li>
+                            <li><strong>Brand Lifecycle Management:</strong> Managed the complete product lifecycle (concept to container) for high-compliance portfolios, balancing the premium wash and hardware demands of CKJ Denims with the technical functionality, testing, and performance requirements of Adidas Non-Denims.</li>
+                            <li><strong>Expert Costing & Negotiation:</strong> Executed detailed BOM costing and successfully negotiated competitive FOB/CMT prices for complex styles, consistently achieving target margins while adhering to both brands' strict quality and material specifications.</li>
+                            <li><strong>Proactive TNA & Execution Control:</strong> Developed and rigorously enforced detailed Time and Action (TNA) plans, proactively mitigating supply chain risks (e.g., fabric delays, wash rejections) to maintain a consistent record of On-Time Delivery (OTD) for bulk orders.</li>
+                            <li><strong>Specialized Sourcing & Compliance:</strong> Directed the sourcing of technical raw materials, including specific indigo denims and functional performance fabrics, ensuring all materials passed rigorous Adidas RSL (Restricted Substance List) and CKJ wash/durability tests via third-party laboratories.</li>
+                            <li><strong>Critical Sample & QC Management:</strong> Oversaw the approval of all technical milestones, including CKJ Wash Standards, Adidas Fit Samples, and bulk in-line/final inspections, ensuring the highest AQL standards were met before Ex-Factory date.</li>
+                            <li><strong>Vendor & Logistics Coordination:</strong> Coordinated efforts across internal production teams, external sub-contractors (like denim laundries), and logistics partners, guaranteeing seamless final execution and timely dispatch documentation (Incoterms, LC management).</li>
                         </ul>
                     </div>
                 </div>
@@ -86,10 +108,11 @@
                         <h3>Merchandiser</h3>
                         <h4>Laguna Clothing Pvt Ltd, Bangalore</h4>
                         <ul>
-                            <li>Managed product development lifecycle for Hugo Boss and Bestseller</li>
-                            <li>Oversaw global vendor partnerships and quality compliance</li>
-                            <li>Leveraged AI forecasting tools for product assortment decisions</li>
-                            <li>Conducted cross-functional sessions for product refinement</li>
+                            <li><strong>Premium Brand Blueprint Execution:</strong> Successfully translated complex creative briefs and technical packs from Polo Ralph Lauren (PRL) and Hugo Boss into commercially viable products, ensuring 100% adherence to their stringent construction, fit, and aesthetic standards throughout the entire sampling lifecycle (Proto, Fit, PP Sample).</li>
+                            <li><strong>Specialized Fabric & Raw Material Sourcing:</strong> Led the development and sourcing of high-end shirt fabrics (likely from Italian or specialized mills, relevant to Laguna's core business) and coordinated the submission and approval of all trims, labels, and specialized materials to meet the specific quality, compliance, and sustainability requirements of both global luxury brands.</li>
+                            <li><strong>Cost Feasibility & Value Engineering:</strong> Conducted initial cost analysis and feasibility studies during the design phase, providing timely inputs on raw material consumption, construction complexities, and finishing costs to ensure styles met the target price points and achieved optimal margins for the export house.</li>
+                            <li><strong>PLM/WIP Process Ownership:</strong> Maintained absolute integrity of product data within the Product Lifecycle Management (PLM) system (or equivalent internal WIP system), efficiently managing the flow of approvals, specifications, and Bill of Materials (BOM) updates between the Design/Technical teams and the Laguna manufacturing unit.</li>
+                            <li><strong>Risk & Timeline Management:</strong> Managed the critical path for the entire development stage, ensuring on-time submission of samples and approvals to secure the final 'Buy Ready' status, thereby significantly reducing the lead time risk for the subsequent bulk production phase.</li>
                         </ul>
                     </div>
                 </div>
@@ -102,28 +125,50 @@
             <h2 class="section-title">Skills & Proficiencies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Hard Skills</h3>
+                    <h3>🔧 Technical & Product Development</h3>
                     <ul>
-                        <li>SQL, CRM, CENTRIC, GT NEXUS, Power BI</li>
-                        <li>Planning and Allocation</li>
-                        <li>Merchandising</li>
-                        <li>Sourcing & Vendor Management</li>
-                        <li>Inventory Management</li>
-                        <li>Microsoft Excel, Word, PowerPoint</li>
+                        <li>Tech Pack Interpretation & Execution</li>
+                        <li>Costing & BOM Management (FOB, CIF, CMT)</li>
+                        <li>Material Science & Sourcing (Denim, Performance Fabrics)</li>
+                        <li>Sampling Management (Proto, Fit, Counter, PP)</li>
+                        <li>Pattern & Fit Analysis</li>
+                        <li>Lab Dips & Strike-offs Coordination</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Soft Skills</h3>
+                    <h3>📅 Planning & Execution</h3>
                     <ul>
-                        <li>Analytical Thinking</li>
-                        <li>Negotiation</li>
-                        <li>Effective Communication</li>
-                        <li>Time and Priority Management</li>
-                        <li>Cross-functional Collaboration</li>
+                        <li>Time and Action (TNA) Planning</li>
+                        <li>Production Monitoring (WIP)</li>
+                        <li>Quality Control (QC) & AQL Standards</li>
+                        <li>Compliance & Testing (RSL, Colorfastness)</li>
+                        <li>Logistics & Documentation (Incoterms, LC/CAD)</li>
+                        <li>On-Time Delivery (OTD) Management</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Languages</h3>
+                    <h3>🤝 Communication & Commercial</h3>
+                    <ul>
+                        <li>Client Relationship Management</li>
+                        <li>Negotiation (Suppliers & Buyers)</li>
+                        <li>Problem-Solving & Risk Mitigation</li>
+                        <li>ERP/PLM Proficiency (CENTRIC, GT NEXUS)</li>
+                        <li>Cross-functional Team Coordination</li>
+                        <li>Power BI & SQL Data Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>💻 Technical Tools</h3>
+                    <ul>
+                        <li>SQL, CRM Systems</li>
+                        <li>CENTRIC PLM, GT NEXUS</li>
+                        <li>Power BI & Data Analytics</li>
+                        <li>Microsoft Excel (Advanced)</li>
+                        <li>Microsoft Word, PowerPoint</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🌍 Languages</h3>
                     <ul>
                         <li>English - Professional</li>
                         <li>Hindi - Intermediate</li>
@@ -147,53 +192,49 @@
     </section>
 
     <section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title">Let's Connect</h2>
-        <div class="contact-content">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <form action="https://formsubmit.co/patilvrushabh07@gmail.com" method="POST" class="contact-form">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
 
-            <form action="https://formsubmit.co/patilvrushabh07@gmail.com" method="POST" class="contact-form">
-                <input type="hidden" name="_captcha" value="false">
-
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="icon">📧</span>
-                    <div>
-                        <h4>Email</h4>
-                        <p>patilvrushabh07@gmail.com</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>patilvrushabh07@gmail.com</p>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">📞</span>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+91 9175902150</p>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9175902150</p>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">🌍</span>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Bangalore, India</p>
+                    <div class="contact-item">
+                        <span class="icon">🌍</span>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bangalore, India</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="footer">
-    <div class="container">
-        <p>© 2025 Vrushabh Patil </p>
-    </div>
-</footer>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Vrushabh Patil</p>
+        </div>
+    </footer>
 
     <div id="pdfModal" class="modal">
         <div class="modal-content">
@@ -204,7 +245,6 @@
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

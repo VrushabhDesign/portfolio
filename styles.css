@@ -7,7 +7,7 @@
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
-    --accent-color: #e74c3c;
+    --accent-color: #3cb6e7;
     --text-color: #333;
     --light-bg: #f8f9fa;
     --white: #ffffff;
@@ -186,8 +186,76 @@ section {
     margin-bottom: 0.5rem;
 }
 
+.brands-section {
+    background: var(--white);
+    padding: 60px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.brands-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.brands-marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.brands-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    animation: marquee 30s linear infinite;
+    width: fit-content;
+}
+
+.brands-track:hover {
+    animation-play-state: paused;
+}
+
+.brand-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.brand-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .brands-track {
+        gap: 60px;
+    }
+    
+    .brand-logo {
+        height: 40px;
+    }
+}
+
 .timeline {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -237,11 +305,13 @@ section {
 }
 
 .timeline-content ul {
-    list-style-position: inside;
+    list-style-position: outside;
+    padding-left: 1.2rem;
 }
 
 .timeline-content li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
 }
 
 .skills {
@@ -250,7 +320,7 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
@@ -278,6 +348,10 @@ section {
 
 .skill-category li:last-child {
     border-bottom: none;
+}
+
+.skill-category .icon-skill {
+    margin-right: 0.3rem;
 }
 
 .collections-header {
@@ -357,11 +431,33 @@ section {
 }
 
 .contact-content {
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: fit-content;
 }
 
 .contact-info {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -433,60 +529,63 @@ section {
     overflow: hidden;
     margin-top: 1rem;
 }
-.contact-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px 15px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    font-size: 1rem;
-}
-
-.contact-form button {
-    width: fit-content;
-}
-
-.contact-content {
-    display: flex;
-    gap: 2rem;
-}
-
-@media(max-width: 768px) {
-    .contact-content {
-        flex-direction: column;
-    }
-}
-
 
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
     }
+    
     .nav-links {
-        display: none;
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
+        gap: 0;
     }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        padding: 1rem 0;
+    }
+    
     .hero h1 {
         font-size: 2.5rem;
     }
+    
     .hero h2 {
         font-size: 1.5rem;
     }
+    
     .hero-buttons {
         flex-direction: column;
     }
+    
     .about-content {
         grid-template-columns: 1fr;
     }
+    
     .timeline-item {
         grid-template-columns: 1fr;
     }
+    
     .timeline-item::before {
         display: none;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
